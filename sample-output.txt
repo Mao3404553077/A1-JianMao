@@ -1,0 +1,194 @@
+﻿================================================================================
+ PROG2004 Object Oriented Programming - Assessment 1
+ Health Appointment System - scripted console demonstration
+ Student: Jian Mao (25259162)
+ Simulation day: 2026-11-12 (THURSDAY)
+ Bookings are only made for the current day.
+================================================================================
+
+================================================================================
+ PART 3 - Working with health professional objects
+================================================================================
+ 8 professionals of 4 concrete types are stored together in one List<HealthProfessional>.
+ Printing each object calls its own toString(), which adds the role-specific
+ details to the shared details inherited from HealthProfessional:
+
+ ID: 1001 | Name: Dr Alice Nguyen    | Role: General Practitioner         | Works: Mon, Tue, Wed, Thu, Fri
+           Registration: MED-1001
+           Accepting new patients: yes
+
+ ID: 1002 | Name: Dr Ben Carter      | Role: General Practitioner         | Works: Mon, Tue, Wed, Thu, Fri
+           Registration: MED-1002
+           Accepting new patients: no
+
+ ID: 1003 | Name: Dr Chloe Martin    | Role: General Practitioner         | Works: Mon, Tue, Wed, Thu, Fri
+           Registration: MED-1003
+           Accepting new patients: yes
+
+ ID: 2001 | Name: Dr Daniel Okafor   | Role: Specialist (Cardiology)      | Works: Mon, Tue, Wed, Thu, Fri
+           Registration: MED-2001
+           Specialty: Cardiology
+
+ ID: 2002 | Name: Dr Emma Rossi      | Role: Specialist (Paediatrics)     | Works: Mon, Tue, Wed, Thu, Fri
+           Registration: MED-2002
+           Specialty: Paediatrics
+
+ ID: 3001 | Name: Grace Lee          | Role: Nurse                        | Works: Mon, Tue, Wed, Thu, Fri
+           Assigned ward: Ward 3B
+
+ ID: 3002 | Name: Henry Adams        | Role: Nurse                        | Works: Mon, Tue, Wed, Thu, Fri
+           Assigned ward: Ward 5A
+
+ ID: 4001 | Name: Isla Brown         | Role: Dietitian                    | Works: Mon, Tue, Wed, Thu, Fri
+           Dietary focus: Sports nutrition
+
+
+ The same objects respond in their own way when handled as HealthProfessional
+--------------------------------------------------------------------------------
+  Dr Alice Nguyen (General Practitioner): conducts general consultations, diagnoses common conditions and prescribes medication
+  Dr Ben Carter (General Practitioner): conducts general consultations, diagnoses common conditions and prescribes medication
+  Dr Chloe Martin (General Practitioner): conducts general consultations, diagnoses common conditions and prescribes medication
+  Dr Daniel Okafor (Specialist (Cardiology)): provides specialist assessment and treatment in Cardiology
+  Dr Emma Rossi (Specialist (Paediatrics)): provides specialist assessment and treatment in Paediatrics
+  Grace Lee (Nurse): takes blood samples, monitors patients and administers medication under supervision
+  Henry Adams (Nurse): takes blood samples, monitors patients and administers medication under supervision
+  Isla Brown (Dietitian): assesses nutritional needs and prepares dietary plans for Sports nutrition
+
+ Behaviour that only one specific type has
+--------------------------------------------------------------------------------
+  Dr Alice Nguyen writes a prescription for Amoxicillin (registration MED-1001).
+  Dr Ben Carter writes a prescription for Amoxicillin (registration MED-1002).
+  Dr Chloe Martin writes a prescription for Amoxicillin (registration MED-1003).
+  Dr Daniel Okafor writes a prescription for Amoxicillin (registration MED-2001).
+  Dr Emma Rossi writes a prescription for Amoxicillin (registration MED-2002).
+  Grace Lee takes a blood sample and labels it for the laboratory.
+  Henry Adams takes a blood sample and labels it for the laboratory.
+
+  Adding a fifth type would mean one new subclass and no change to this loop,
+  to the list, or to any of the appointment code.
+
+================================================================================
+ PART 4 - Modelling an appointment
+================================================================================
+ One Appointment class links a patient, a health professional and a time:
+   09:00 | Alice Wong (0412 345 678)  | General Practitioner Dr Alice Nguyen (ID 1001)
+   09:30 | Ben Smith (0423 456 789)   | Nurse Grace Lee (ID 3001)
+
+ The professional attribute is a HealthProfessional, so the same class accepted
+ a GP and a nurse, and printing an appointment shows the professional's details.
+
+ Appointment implements Comparable, so a collection can be put in time order:
+   first.compareTo(second) = -1  (negative, meaning the first appointment is earlier)
+
+ The time is stored as a LocalTime, not a String, so comparing and sorting
+ times is correct without any extra parsing.
+
+================================================================================
+ PART 5 - Managing the collection of appointments
+================================================================================
+ The clinic works to a fixed daily schedule, between 08:00 and 16:00 in 30-minute slots:
+  08:00  08:30  09:00  09:30  10:00  10:30  11:00  11:30  12:00  12:30  13:00  13:30  14:00  14:30  15:00  15:30  
+  16 bookable start times; changing ClinicSchedule changes the whole system.
+
+ Booking appointments for today (all required information is checked)
+--------------------------------------------------------------------------------
+   Booking confirmed: 09:00 with Dr Alice Nguyen (ID 1001) for Alice Wong.
+   Booking confirmed: 09:00 with Grace Lee (ID 3001) for Ben Smith.
+   Booking confirmed: 10:30 with Dr Daniel Okafor (ID 2001) for Chloe Tan.
+   Booking confirmed: 11:00 with Isla Brown (ID 4001) for Alice Wong.
+   Booking confirmed: 14:00 with Dr Ben Carter (ID 1002) for Ben Smith.
+   Booking confirmed: 15:30 with Henry Adams (ID 3002) for Chloe Tan.
+   Booking confirmed: 08:00 with Dr Chloe Martin (ID 1003) for David Kim.
+
+ Every appointment, in the order it was booked
+--------------------------------------------------------------------------------
+ Current appointments:
+    1. 09:00 | Alice Wong (0412 345 678)  | General Practitioner Dr Alice Nguyen (ID 1001)
+    2. 09:00 | Ben Smith (0423 456 789)   | Nurse Grace Lee (ID 3001)
+    3. 10:30 | Chloe Tan (0434 567 890)   | Specialist (Cardiology) Dr Daniel Okafor (ID 2001)
+    4. 11:00 | Alice Wong (0412 345 678)  | Dietitian Isla Brown (ID 4001)
+    5. 14:00 | Ben Smith (0423 456 789)   | General Practitioner Dr Ben Carter (ID 1002)
+    6. 15:30 | Chloe Tan (0434 567 890)   | Nurse Henry Adams (ID 3002)
+    7. 08:00 | David Kim (0455 678 901)   | General Practitioner Dr Chloe Martin (ID 1003)
+ Total appointments: 7
+
+ Filtering by health professional ID
+--------------------------------------------------------------------------------
+ Appointments for professional ID 1001:
+    1. 09:00 | Alice Wong (0412 345 678)  | General Practitioner Dr Alice Nguyen (ID 1001)
+
+ Filtering by patient mobile number
+--------------------------------------------------------------------------------
+ Appointments for 0423 456 789:
+    1. 09:00 | Ben Smith (0423 456 789)   | Nurse Grace Lee (ID 3001)
+    2. 14:00 | Ben Smith (0423 456 789)   | General Practitioner Dr Ben Carter (ID 1002)
+
+ Sorting: the filtered subset, earliest to latest
+--------------------------------------------------------------------------------
+ Appointments for 0423 456 789, sorted:
+    1. 09:00 | Ben Smith (0423 456 789)   | Nurse Grace Lee (ID 3001)
+    2. 14:00 | Ben Smith (0423 456 789)   | General Practitioner Dr Ben Carter (ID 1002)
+
+ Sorting: all appointments, earliest to latest
+--------------------------------------------------------------------------------
+ All appointments, sorted:
+    1. 08:00 | David Kim (0455 678 901)   | General Practitioner Dr Chloe Martin (ID 1003)
+    2. 09:00 | Alice Wong (0412 345 678)  | General Practitioner Dr Alice Nguyen (ID 1001)
+    3. 09:00 | Ben Smith (0423 456 789)   | Nurse Grace Lee (ID 3001)
+    4. 10:30 | Chloe Tan (0434 567 890)   | Specialist (Cardiology) Dr Daniel Okafor (ID 2001)
+    5. 11:00 | Alice Wong (0412 345 678)  | Dietitian Isla Brown (ID 4001)
+    6. 14:00 | Ben Smith (0423 456 789)   | General Practitioner Dr Ben Carter (ID 1002)
+    7. 15:30 | Chloe Tan (0434 567 890)   | Nurse Henry Adams (ID 3002)
+
+================================================================================
+ PART 6 - Working with appointments: cancellations and error cases
+================================================================================
+
+ Operations that cannot be performed return a warning
+--------------------------------------------------------------------------------
+   Warning: Dr Alice Nguyen (ID 1001) is already booked at 09:00 for Alice Wong.
+   Warning: 08:15 is not a clinic time slot (between 08:00 and 16:00 in 30-minute slots).
+   Warning: 18:00 is not a clinic time slot (between 08:00 and 16:00 in 30-minute slots).
+   Warning: Dr Jack Wilson (ID 1099) does not work on Thursday.
+   Warning: a patient, a health professional and a time are all required to book an appointment.
+   Warning: no appointment found for professional ID 1001 at 15:30.
+   Warning: no appointments found for mobile number 0400 000 000.
+
+ Cancelling an appointment by professional ID and time
+--------------------------------------------------------------------------------
+   Appointment cancelled: 09:00 with Dr Alice Nguyen (ID 1001) for Alice Wong.
+ Appointments after that cancellation:
+    1. 08:00 | David Kim (0455 678 901)   | General Practitioner Dr Chloe Martin (ID 1003)
+    2. 09:00 | Ben Smith (0423 456 789)   | Nurse Grace Lee (ID 3001)
+    3. 10:30 | Chloe Tan (0434 567 890)   | Specialist (Cardiology) Dr Daniel Okafor (ID 2001)
+    4. 11:00 | Alice Wong (0412 345 678)  | Dietitian Isla Brown (ID 4001)
+    5. 14:00 | Ben Smith (0423 456 789)   | General Practitioner Dr Ben Carter (ID 1002)
+    6. 15:30 | Chloe Tan (0434 567 890)   | Nurse Henry Adams (ID 3002)
+ Total appointments: 6
+
+ Cancelling every appointment for a patient by mobile number
+--------------------------------------------------------------------------------
+   Appointments cancelled for mobile number 0423 456 789: 2 appointment(s) removed.
+           - 09:00 with Grace Lee (ID 3001)
+           - 14:00 with Dr Ben Carter (ID 1002)
+ Appointments after that cancellation:
+    1. 08:00 | David Kim (0455 678 901)   | General Practitioner Dr Chloe Martin (ID 1003)
+    2. 10:30 | Chloe Tan (0434 567 890)   | Specialist (Cardiology) Dr Daniel Okafor (ID 2001)
+    3. 11:00 | Alice Wong (0412 345 678)  | Dietitian Isla Brown (ID 4001)
+    4. 15:30 | Chloe Tan (0434 567 890)   | Nurse Henry Adams (ID 3002)
+ Total appointments: 4
+
+ Part 5 and Part 6 functionality that has been demonstrated
+--------------------------------------------------------------------------------
+  - add an appointment, with all required information checked
+  - reject a booking that would double-book a professional
+  - reject a time that is not a clinic slot, or is outside opening hours
+  - reject a professional who does not work today
+  - view all appointments, and filter by professional ID or mobile number
+  - sort all appointments, and sort a filtered subset, by time
+  - cancel by professional ID and time, and cancel by mobile number
+  - display the updated collection after each cancellation
+
+================================================================================
+ End of demonstration.
+================================================================================
