@@ -16,7 +16,7 @@
 
 - 只有"输入代码、保存文件、切换文件"这类**真实编辑**才会产生心跳（heartbeat）。
 - 连续约 **15 分钟没有任何操作**，计时自动停止。把 VS Code 开着去吃饭、挂机，**不会涨时长**。
-- 时间按**项目文件夹**归集，项目名由根目录的 `.wakatime-project` 决定，本仓库已设为 `A1-JianMao`。
+- 时间按**项目文件夹**归集，项目名由根目录的 `.wakatime-project` 决定，本仓库已设为 `A1-jmao13`。
 - 因此要打开**整个文件夹**，不要零散地双击单个 `.java` 文件打开——那样会记到 `Unknown Project`。
 
 ## 三、每天怎么用
@@ -33,14 +33,14 @@
 
 1. 浏览器打开 <https://wakatime.com/dashboard> 并登录。
 2. 时间范围选整个作业周期（例如 `Custom Range`：11/12 – 11/16，或 `Last 7 Days`）。
-3. 在 Projects 里确认能看到 `A1-JianMao`。
+3. 在 Projects 里确认能看到 `A1-jmao13`。
 4. 导出 PDF：Dashboard 页面右侧 `Export` → PDF；或直接整页截图。
 5. 命名成 `A1-用户名-WakaTime.pdf`（png/jpg 也可以），随项目一起提交。
 
 ## 五、常见问题
 
 **报告里项目名不对 / 显示 Unknown Project**
-：确认打开的是 `A1-JianMao` 文件夹，且根目录的 `.wakatime-project` 还在。
+：确认打开的是 `A1-jmao13` 文件夹，且根目录的 `.wakatime-project` 还在。
 
 **时长比预期少**
 ：正常。只有真实编辑才算，一天 1–3 小时符合学生做作业的节奏；报告真实比数字好看更重要。

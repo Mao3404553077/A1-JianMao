@@ -9,7 +9,7 @@ if the unit assessor asks "where is this requirement met?".
 | Requirement | Evidence | Status |
 | --- | --- | --- |
 | Use the Java language | `src/*.java`, no other language, no external libraries | Done |
-| Java project with all source files, zipped as `A1-username.zip` | `A1-JianMao.zip`, `run.bat`, `README.md` | Done (rename to your username) |
+| Java project with all source files, zipped as `A1-username.zip` | `A1-jmao13.zip`, `run.bat`, `README.md` | Done (rename to your username) |
 | WakaTime tracking | Not in this repository - install the plugin and work in the IDE | **Student action** |
 | Regular GitHub commits over the assessment period | `docs/GIT_PLAN.md` gives the commit sequence | **Student action** |
 | Short video on the four pillars (max 5 minutes) | `docs/VIDEO_SCRIPT.md` gives the full script | **Student action (record)** |

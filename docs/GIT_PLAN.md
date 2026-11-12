@@ -68,8 +68,8 @@ git push
 This repository already exists and is connected:
 
 ```
-https://github.com/Mao3404553077/A1-JianMao        (private)
-origin  git@github.com:Mao3404553077/A1-JianMao.git
+https://github.com/Mao3404553077/A1-jmao13        (private)
+origin  git@github.com:Mao3404553077/A1-jmao13.git
 ```
 
 The remote uses SSH because `github.com:443` is blocked on this network, while
