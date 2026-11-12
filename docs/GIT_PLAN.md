@@ -59,15 +59,31 @@ git push -u origin main
 ## Commands
 
 ```powershell
-git init
-git add .
-git commit -m "Add project skeleton and README"
-
-# create an EMPTY repository on github.com first, then:
-git remote add origin https://github.com/<your-username>/A1-<username>.git
-git branch -M main
-git push -u origin main
+git status
+git add -A
+git commit -m "Describe the change in the imperative mood"
+git push
 ```
+
+This repository already exists and is connected:
+
+```
+https://github.com/Mao3404553077/A1-JianMao        (private)
+origin  git@github.com:Mao3404553077/A1-JianMao.git
+```
+
+The remote uses SSH because `github.com:443` is blocked on this network, while
+port 22 is open. Git for Windows cannot read a user profile path that contains
+Chinese characters, so this repository tells git to use the Windows OpenSSH
+client:
+
+```powershell
+git config core.sshCommand '"C:/Windows/System32/OpenSSH/ssh.exe" -o StrictHostKeyChecking=accept-new'
+```
+
+A deploy key for this one repository is installed on the GitHub side, so pushing
+does not ask for a password. Add the tutor and the unit assessor under
+**Settings > Collaborators** before the deadline.
 
 Compile before every commit so no commit is broken:
 
