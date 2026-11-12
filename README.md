@@ -4,7 +4,7 @@
 | --- | --- |
 | Unit | PROG2004 Object Oriented Programming |
 | Assessment | Assessment 1 (40%, individual) |
-| Student | Jian Mao (25259162) |
+| Student | Jian Mao |
 | Due | Monday of Week 4, 16 Nov 2026, 11:59 pm |
 | Language | Java (no external libraries) |
 

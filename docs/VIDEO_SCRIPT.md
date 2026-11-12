@@ -19,7 +19,7 @@ microphone level before recording. Upload to your SCU OneDrive and share with
 
 ## 0:00 - 0:20 Introduction
 
-> My name is Jian Mao, student number 25259162. This is my PROG2004 Assessment 1:
+> My name is Jian Mao, student number [your student number]. This is my PROG2004 Assessment 1:
 > a Java appointment system for a health service. I will show how the four pillars
 > of object-oriented programming are used in my code, and why.
 

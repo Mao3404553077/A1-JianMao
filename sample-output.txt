@@ -1,8 +1,8 @@
 ﻿================================================================================
  PROG2004 Object Oriented Programming - Assessment 1
  Health Appointment System - scripted console demonstration
- Student: Jian Mao (25259162)
- Simulation day: 2026-11-12 (THURSDAY)
+ Student: Jian Mao
+ Simulation day: 2026-11-13 (FRIDAY)
  Bookings are only made for the current day.
 ================================================================================
 
@@ -149,7 +149,7 @@
    Warning: Dr Alice Nguyen (ID 1001) is already booked at 09:00 for Alice Wong.
    Warning: 08:15 is not a clinic time slot (between 08:00 and 16:00 in 30-minute slots).
    Warning: 18:00 is not a clinic time slot (between 08:00 and 16:00 in 30-minute slots).
-   Warning: Dr Jack Wilson (ID 1099) does not work on Thursday.
+   Warning: Dr Jack Wilson (ID 1099) does not work on Friday.
    Warning: a patient, a health professional and a time are all required to book an appointment.
    Warning: no appointment found for professional ID 1001 at 15:30.
    Warning: no appointments found for mobile number 0400 000 000.

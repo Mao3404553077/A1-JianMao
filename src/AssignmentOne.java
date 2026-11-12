@@ -296,7 +296,7 @@ public class AssignmentOne {
         System.out.println(HEAVY);
         System.out.println(" PROG2004 Object Oriented Programming - Assessment 1");
         System.out.println(" Health Appointment System - scripted console demonstration");
-        System.out.println(" Student: Jian Mao (25259162)");
+        System.out.println(" Student: Jian Mao");
         System.out.println(" Simulation day: " + LocalDate.now() + " ("
                 + LocalDate.now().getDayOfWeek() + ")");
         System.out.println(" Bookings are only made for the current day.");
