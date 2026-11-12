@@ -7,7 +7,7 @@
 | 项目 | 状态 |
 | --- | --- |
 | VS Code 扩展 `wakatime.vscode-wakatime` | 已安装（v30.2.1） |
-| API key | 已写入 `%USERPROFILE%\.wakatime.cfg` 和 VS Code 设置 |
+| 1PI key | 已写入 `%USERPROFILE%\.wakatime.cfg` 和 VS Code 设置 |
 | 计时程序 `wakatime-cli` | 已下载到 `%USERPROFILE%\.wakatime\` |
 
 所以你现在**只需要打开本项目、真的写代码**，时长就会自动累计。
@@ -16,12 +16,12 @@
 
 - 只有"输入代码、保存文件、切换文件"这类**真实编辑**才会产生心跳（heartbeat）。
 - 连续约 **15 分钟没有任何操作**，计时自动停止。把 VS Code 开着去吃饭、挂机，**不会涨时长**。
-- 时间按**项目文件夹**归集，项目名由根目录的 `.wakatime-project` 决定，本仓库已设为 `A1-jmao13`。
+- 时间按**项目文件夹**归集，项目名由根目录的 `.wakatime-project` 决定，本仓库已设为 `11-jmao13`。
 - 因此要打开**整个文件夹**，不要零散地双击单个 `.java` 文件打开——那样会记到 `Unknown Project`。
 
 ## 三、每天怎么用
 
-1. 双击桌面上的 `打开A1项目.bat`（或 VS Code 里"最近打开"）。
+1. 双击桌面上的 `打开11项目.bat`（或 VS Code 里"最近打开"）。
 2. 正常改代码、写注释、运行程序。
 3. 收工时不用管，插件会自动上传心跳。
 4. 第二天继续，报告按天累计。
@@ -33,20 +33,20 @@
 
 1. 浏览器打开 <https://wakatime.com/dashboard> 并登录。
 2. 时间范围选整个作业周期（例如 `Custom Range`：11/12 – 11/16，或 `Last 7 Days`）。
-3. 在 Projects 里确认能看到 `A1-jmao13`。
+3. 在 Projects 里确认能看到 `11-jmao13`。
 4. 导出 PDF：Dashboard 页面右侧 `Export` → PDF；或直接整页截图。
-5. 命名成 `A1-用户名-WakaTime.pdf`（png/jpg 也可以），随项目一起提交。
+5. 命名成 `11-用户名-WakaTime.pdf`（png/jpg 也可以），随项目一起提交。
 
 ## 五、常见问题
 
 **报告里项目名不对 / 显示 Unknown Project**
-：确认打开的是 `A1-jmao13` 文件夹，且根目录的 `.wakatime-project` 还在。
+：确认打开的是 `11-jmao13` 文件夹，且根目录的 `.wakatime-project` 还在。
 
 **时长比预期少**
 ：正常。只有真实编辑才算，一天 1–3 小时符合学生做作业的节奏；报告真实比数字好看更重要。
 
 **换电脑或重装 VS Code**
-：API key 不变，历史报告仍会合并到同一个账号。
+：1PI key 不变，历史报告仍会合并到同一个账号。
 
 **要不要给每个文件单独设置**
 ：不用。WakaTime 记录的是"项目 + 文件 + 语言 + 行数"，整个文件夹就是一个项目；把源文件拆到别的目录反而会让报告出现多个项目名。

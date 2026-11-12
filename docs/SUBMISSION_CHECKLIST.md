@@ -8,41 +8,40 @@ resubmitted after the deadline.
 
 | # | Item | Where it goes | Done |
 | --- | --- | --- | --- |
-| 1 | Java project with all source files, zipped as `A1-username.zip` | MySCU submission box | [ ] |
-| 2 | GitHub repository link (private repo: invite tutor + unit assessor) | Submission comments | [ ] |
-| 3 | WakaTime screenshot or report, named `A1-username-WakaTime.png/jpg/pdf` | MySCU submission box | [ ] |
+| 1 | Java project with all source files, zipped as `A1-jmao13.zip` | MySCU submission box | [ ] |
+| 2 | GitHub repository link: https://github.com/Mao3404553077/A1-jmao13 (public) | Submission comments | [ ] |
+| 3 | WakaTime screenshot or report, named `A1-jmao13-WakaTime.png/jpg/pdf` | MySCU submission box | [ ] |
 | 4 | Link to the short video (max 5 minutes, SCU OneDrive share link) | Submission comments | [ ] |
 | 5 | GenAI declaration | Submission comments | [ ] |
 
-Replace `username` with your MySCU username everywhere, including the project
-folder and the zip file name.
+The MySCU username is `jmao13`, so the project folder, the zip file and the
+WakaTime report all use `A1-jmao13`.
 
 ## 1. The zip
 
-- [ ] Project folder is named `A1-username`.
+- [ ] Project folder is named `A1-jmao13`.
 - [ ] Only source and project files are inside; `out/`, `.class` files and `.idea/`
       are excluded (see `.gitignore`).
 - [ ] `.\run.bat` (or the VS Code `Java: run` task) still compiles from a clean copy,
       and the demonstration still runs.
 - [ ] `sample-output.txt` and `README.md` are included (they help the marker).
-- [ ] Zip is named `A1-username.zip` and opens without errors.
+- [ ] Zip is named `A1-jmao13.zip` and opens without errors.
 
 ## 2. GitHub repository
 
-- [ ] Repository created and pushed (see `docs/GIT_PLAN.md`).
+- [x] Repository created and pushed: https://github.com/Mao3404553077/A1-jmao13
 - [ ] Commit history shows work across several days, with descriptive messages -
       not one "final" commit.
-- [ ] `README.md` is in the repository.
-- [ ] If the repository is private, the tutor and the unit assessor are invited as
-      collaborators (Settings > Collaborators). Test that the invitation was
-      accepted, or use a public repository.
+- [x] `README.md` is in the repository.
+- [x] The repository is public, so the tutor and the unit assessor can open the link
+      without a collaborator invitation.
 
 ## 3. WakaTime
 
 - [ ] WakaTime plugin installed in the IDE and logged in before the first coding
       session (time cannot be reconstructed afterwards).
-- [ ] Project tracked under the name `A1-username`.
-- [ ] Report or dashboard screenshot exported as `A1-username-WakaTime.png`, `.jpg`
+- [ ] Project tracked under the name `A1-jmao13`.
+- [ ] Report or dashboard screenshot exported as `A1-jmao13-WakaTime.png`, `.jpg`
       or `.pdf`.
 - [ ] The report shows a realistic spread of time over the assessment period, not a
       single block.

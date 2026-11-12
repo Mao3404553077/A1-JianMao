@@ -6,9 +6,9 @@
 
 | 要交的东西 | 具体要求 | 放在哪 |
 | --- | --- | --- |
-| Java 项目压缩包 | 命名为 `A1-你的MySCU用户名.zip`，包含全部源代码 | MySCU 提交框 |
+| Java 项目压缩包 | 命名为 `A1-jmao13.zip`，包含全部源代码 | MySCU 提交框 |
 | GitHub 仓库链接 | 仓库里要有持续、有意义的提交记录；私有仓库要邀请 tutor 和 unit assessor | 提交框的 comments |
-| WakaTime 报告/截图 | 命名为 `A1-用户名-WakaTime.png/jpg/pdf` | MySCU 提交框 |
+| WakaTime 报告/截图 | 命名为 `A1-jmao13-WakaTime.png/jpg/pdf` | MySCU 提交框 |
 | 视频链接 | 最长 5 分钟，讲清四大支柱，上传 SCU OneDrive 并生成可访问链接 | 提交框的 comments |
 | GenAI 声明 | 按 brief 给出的两段话选一段 | 提交框的 comments |
 
@@ -50,7 +50,7 @@ Part 5 占 15%，Part 6 占 10%，视频 10%，GitHub/WakaTime/代码质量 10%�
 ## 五、提交前自检
 
 - [ ] 项目能从零编译运行：双击 `run.bat`，或在 VS Code 里跑 `Java: run` 任务
-- [ ] 压缩包叫 `A1-用户名.zip`，里面没有 `out/`、`.class`、`.idea/`
+- [ ] 压缩包叫 `A1-jmao13.zip`，里面没有 `out/`、`.class`、`.idea/`
 - [ ] GitHub 链接可访问（私有仓库已加协作者）
 - [ ] WakaTime 文件命名正确
 - [ ] 视频 ≤5 分钟、链接在无痕窗口能打开
